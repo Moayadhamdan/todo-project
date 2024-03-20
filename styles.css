@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+header img {
+    margin-right: 10px;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    display: inline;
+    margin-left: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* styles.css */
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+section {
+    margin-bottom: 20px;
+}
+
+section div {
+    margin-bottom: 10px;
+}
+
+section h2 {
+    color: #333;
+}
+
+section p {
+    color: #555;
+}
+
+section input[type="text"],
+section input[type="email"],
+section textarea {
+    width: 100%;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+section input[type="text"]:focus,
+section input[type="email"]:focus,
+section textarea:focus {
+    outline: none;
+    border-color: #333;
+}
+
+section button {
+    padding: 8px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section button:hover {
+    background-color: #555;
+}
