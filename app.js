@@ -31,24 +31,29 @@ if (!skipMessage){
 
 //=============== lab 6 ================
 function askUser(question) {
-    let answer = prompt(question + "(Yes/No)");
-    while (answer !== "yes" && answer !== "no" && answer !== "") {
-        answer = prompt("please enter a valid answer (Yes/No)");
+    let answer = prompt(question + " (Yes/No)");
+    while (answer.toLowerCase() !== "yes" && answer.toLowerCase() !== "no") {
+        return "invalid";
     }
     return answer;
 }
 
 function allAnswer() {
     let answers = []; 
-    answers.push(askUser("Have you tried Hamdan Restaurant before?"));
-    answers.push(askUser("Would you recommend our restaurant to others?")); 
-    answers.push(askUser("Do you find our food suitable to your taste?"));
+    let answer = askUser("Have you tried Hamdan Restaurant before?");
+    answers.push(answer === "invalid" ? "invalid" : answer);
+    
+    answer = askUser("Would you recommend our restaurant to others?");
+    answers.push(answer === "invalid" ? "invalid" : answer);
+    
+    answer = askUser("Do you find our food suitable to your taste?");
+    answers.push(answer === "invalid" ? "invalid" : answer);
 
     return answers;
 }
 
 function printAllAnswer(answers) {
-    console.log("User Answers:")
+    console.log("User Answers:");
     for (let i = 0; i < answers.length; i++) {
         console.log("Question " + (i + 1) + ": " + answers[i]);
     }
@@ -56,7 +61,7 @@ function printAllAnswer(answers) {
 
 function main() {
     let userAnswers = allAnswer();
-    printAllAnswer(userAnswers)
+    printAllAnswer(userAnswers);
 }
 
 main();
